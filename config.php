@@ -2,7 +2,7 @@
     $page = (isset($_GET['page']) && $_GET['page']) ? $_GET['page'] : '';
     
     // this configuration path for website
-    define('PATH', '');
+    define('PATH', 'http://localhost/Sofile/');
     define('SITE_URL', PATH . 'index.php');
     define('POSITION_URL', PATH . '?page=' . $page);
     

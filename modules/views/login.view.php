@@ -8,7 +8,7 @@
   <title>Login</title>
 </head>
 <body>
-<form action="http://localhost/sofile/index.php?page=Login&action=login" method="post">
+<form action="<?= SITE_URL . '?page=Login&action=login' ?>" method="post">
   <input type="text" name="username" placeholder="username"> <br>
   <input type="password" name="password" placeholder="password"> <br>
   <input type="submit" value="Login">

@@ -6,7 +6,7 @@ class HomeController extends Controller
   {
     if(!$this->checkSession('username'))
     {
-      $this->redirect('index.php?page=Login');
+      $this->redirect(SITE_URL . '?page=Login');
     }
 
     $this->view("welcome");
