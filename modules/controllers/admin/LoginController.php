@@ -8,7 +8,7 @@ class LoginController extends Controller
 
   public function index()
   {
-    $this->view("login");
+    $this->view("admin/login");
   }
 
   public function login()
@@ -20,13 +20,13 @@ class LoginController extends Controller
     if(count($data) == 1) {
       $this->setSession('user', $data[0]);
     }
-    $this->redirect(SITE_URL);
+    $this->redirect(SITE_URL . '?page=admin/Home');
   }
 
   public function logout()
   {
     $this->unsetSession('user');
-    $this->redirect(SITE_URL);
+    $this->redirect(SITE_URL . '?page=admin/Home');
   }
 }
 

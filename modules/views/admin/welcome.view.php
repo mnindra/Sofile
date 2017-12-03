@@ -38,7 +38,7 @@
             <section>
                 Welcome <?= $_SESSION['user']->name ?>
                 <p>Edit modules/views/welcome.view.php to change this page</p>
-              <a href="index.php?page=Login&action=Logout">Logout</a>
+              <a href="index.php?page=admin/Login&action=Logout">Logout</a>
             </section>
         </div>
     

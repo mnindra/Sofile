@@ -34,7 +34,8 @@
     {
         // membuat object controller
         require_once $controller;
-        $controllerName = ucfirst($page) . 'Controller';
+        $exploded = explode('/', $page);
+        $controllerName = ucfirst(end($exploded)) . 'Controller';
         $obj = new $controllerName();
         
         $action = (isset($_GET['action']) && $_GET['action']) ? $_GET['action'] : 'index';

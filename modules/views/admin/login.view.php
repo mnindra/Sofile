@@ -20,7 +20,7 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Form Login</h4>
-          <form action="<?= SITE_URL . '?page=Login&action=login' ?>" method="post">
+          <form action="<?= SITE_URL . '?page=admin/Login&action=login' ?>" method="post">
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-addon">
