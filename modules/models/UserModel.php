@@ -16,12 +16,4 @@ class UserModel extends Eloquent {
     'password',
     'last_login'
   ];
-
-  public function login($username, $password)
-  {
-    $password = md5($password);
-    $data = $this->where("username = '$username' AND password = '$password'");
-    return count($data) > 0;
-  }
-
 }

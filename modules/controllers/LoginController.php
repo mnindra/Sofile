@@ -13,16 +13,19 @@ class LoginController extends Controller
 
   public function login()
   {
-    if($this->User->login($_POST['username'], $_POST['password']))
-    {
-      $this->setSession("username", $_POST['username']);
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+    $data = $this->User->where("username = '$username' AND '$password'");
+
+    if(count($data) == 1) {
+      $this->setSession('user', $data[0]);
     }
     $this->redirect(SITE_URL);
   }
 
   public function logout()
   {
-    $this->unsetSession('username');
+    $this->unsetSession('user');
     $this->redirect(SITE_URL);
   }
 }
