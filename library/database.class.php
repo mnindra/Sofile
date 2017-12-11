@@ -101,7 +101,6 @@ class Database
             if($this->limit != "")
                 $this->sql .= " LIMIT " . $this->limit;
 
-            echo $this->sql;
         }
         else if($this->action == "insert")
         {        
@@ -146,7 +145,7 @@ class Database
             if($this->where != "")
                 $this->sql .= " WHERE " . $this->where;
         }
-        
+
         $query = mysqli_query($this->instance, $this->sql);
         
         // Kembalikan Semua Data

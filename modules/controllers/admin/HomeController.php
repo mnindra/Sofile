@@ -9,7 +9,8 @@ class HomeController extends Controller
       $this->redirect(SITE_URL . '?page=admin/Login');
     }
 
-    $this->view("admin/welcome");
+    $template['page'] = $this->view('admin/home/index', array(), TRUE);
+    $this->view("admin/template", $template);
   }
 
 }

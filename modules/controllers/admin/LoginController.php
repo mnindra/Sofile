@@ -8,6 +8,10 @@ class LoginController extends Controller
 
   public function index()
   {
+    if($this->checkSession('user')) {
+      $this->redirect(SITE_URL . '?page=admin/Home');
+    }
+
     $this->view("admin/login");
   }
 
