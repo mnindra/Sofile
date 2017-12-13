@@ -32,13 +32,19 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="<?= SITE_URL . '?page=admin/Home' ?>">
-              Beranda <span class="sr-only">(current)</span>
+              Home <span class="sr-only">(current)</span>
             </a>
           </li>
 
           <li class="nav-item active">
             <a class="nav-link" href="<?= SITE_URL . '?page=admin/Position' ?>">
               Position <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Team' ?>">
+              Team <span class="sr-only">(current)</span>
             </a>
           </li>
         </ul>
