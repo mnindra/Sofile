@@ -10,5 +10,6 @@ class AdminController extends Controller
     $this->model("Position");
     $this->model("Team");
     $this->model("User");
+    $this->model("Service");
   }
 }
