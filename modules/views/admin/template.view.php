@@ -10,6 +10,8 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="<?= PATH . 'public/css/bootstrap.min.css' ?>">
+    <!--  Datatables  -->
+    <link rel="stylesheet" href="<?= PATH . 'public/css/dataTables.bootstrap4.min.css' ?>">
     <!-- Material Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="<?= PATH . '/public/js/jquery-3.2.1.min.js' ?>"></script>
@@ -74,5 +76,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?= PATH . '/public/js/bootstrap.bundle.min.js' ?>"></script>
+    <script src="<?= PATH . '/public/js/jquery.dataTables.min.js' ?>"></script>
+    <script src="<?= PATH . '/public/js/dataTables.bootstrap4.min.js' ?>"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table-data').DataTable();
+        });
+    </script>
   </body>
 </html>
