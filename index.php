@@ -12,6 +12,7 @@
     require_once "library/eloquent.class.php";
     require_once "library/view.class.php";
     require_once "library/controller.class.php";
+    require_once "modules/controllers/admin/AdminController.php";
 
     // autoload function
     function __autoload($className) 

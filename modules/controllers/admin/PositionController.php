@@ -1,15 +1,7 @@
 <?php
 
-class PositionController extends Controller
+class PositionController extends AdminController
 {
-  public function __construct() {
-    if(!$this->checkSession('user'))
-    {
-      $this->redirect(SITE_URL . '?page=admin/Login');
-    }
-    $this->model('Position');
-  }
-
   public function index() {
     $template['title'] = "Position";
     $template['breadcrumbs'] = array(

@@ -1,15 +1,7 @@
 <?php
 
-class TeamController extends Controller
+class TeamController extends AdminController
 {
-  public function __construct() {
-    if(!$this->checkSession('user'))
-    {
-      $this->redirect(SITE_URL . '?page=admin/Login');
-    }
-    $this->model('Team');
-  }
-
   public function index() {
     $template['title'] = "Team";
     $template['breadcrumbs'] = array(

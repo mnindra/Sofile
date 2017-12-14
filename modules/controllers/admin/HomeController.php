@@ -1,14 +1,7 @@
 <?php
 
-class HomeController extends Controller
+class HomeController extends AdminController
 {
-  public function __construct() {
-    if(!$this->checkSession('user'))
-    {
-      $this->redirect(SITE_URL . '?page=admin/Login');
-    }
-  }
-
   public function index()
   {
     $template['title'] = "Home";
