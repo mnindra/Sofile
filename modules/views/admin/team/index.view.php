@@ -70,8 +70,10 @@
               <td>${index + 1}</td>
               <td>${row.team}</td>
               <td>
-                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.team_id})">Edit</button>
-                <button type="button" class="btn btn-danger" onclick="destroy(${row.team_id})">Delete</button>
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.team_id})">Edit</button>
+                  <button type="button" class="btn btn-danger" onclick="destroy(${row.team_id})">Delete</button>
+                </div>
               </td>
             </tr>
           `);

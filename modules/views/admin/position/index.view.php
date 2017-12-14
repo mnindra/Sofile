@@ -96,8 +96,10 @@
               <td>${row.salary}</td>
               <td>${row.position_description}</td>
               <td>
-                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.position_id})">Edit</button>
-                <button type="button" class="btn btn-danger" onclick="destroy(${row.position_id})">Delete</button>
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.position_id})">Edit</button>
+                  <button type="button" class="btn btn-danger" onclick="destroy(${row.position_id})">Delete</button>
+                </div>
               </td>
             </tr>
           `);

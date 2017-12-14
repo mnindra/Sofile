@@ -81,8 +81,10 @@
               <td>${row.service}</td>
               <td>${row.service_description}</td>
               <td>
-                <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.service_id})">Edit</button>
-                <button type="button" class="btn btn-danger" onclick="destroy(${row.service_id})">Delete</button>
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.service_id})">Edit</button>
+                  <button type="button" class="btn btn-danger" onclick="destroy(${row.service_id})">Delete</button>
+                </div>
               </td>
             </tr>
           `);
@@ -123,11 +125,11 @@
 
     let show_edit_form = (id) => {
         window.data_master.map(row => {
-           if(row.service_id == id) {
-               $("#service_id_edit").val(row.service_id);
-               $("#service_edit").val(row.service);
-               $("#service_description_edit").val(row.service_description);
-           }
+            if(row.service_id == id) {
+                $("#service_id_edit").val(row.service_id);
+                $("#service_edit").val(row.service);
+                $("#service_description_edit").val(row.service_description);
+            }
         });
 
         $('#form_edit').modal('show');
