@@ -3,14 +3,19 @@
 class PositionController extends Controller
 {
   public function __construct() {
-    $this->model('Position');
-  }
-
-  public function index() {
     if(!$this->checkSession('user'))
     {
       $this->redirect(SITE_URL . '?page=admin/Login');
     }
+    $this->model('Position');
+  }
+
+  public function index() {
+    $template['title'] = "Position";
+    $template['breadcrumbs'] = array(
+      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Position", "link" => "?page=admin/Position"]
+    );
     $template['page'] = $this->view('admin/position/index', array(), TRUE);
     $this->view("admin/template", $template);
   }

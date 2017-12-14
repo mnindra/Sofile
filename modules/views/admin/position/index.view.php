@@ -1,4 +1,3 @@
-<h1>Position</h1>
 <div class="row">
   <div class="col-md-8 col-lg-8">
     <table class="table table-hover table-striped">

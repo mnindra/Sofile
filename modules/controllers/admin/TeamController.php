@@ -3,15 +3,19 @@
 class TeamController extends Controller
 {
   public function __construct() {
-    $this->model('Team');
-  }
-
-  public function index() {
     if(!$this->checkSession('user'))
     {
       $this->redirect(SITE_URL . '?page=admin/Login');
     }
+    $this->model('Team');
+  }
 
+  public function index() {
+    $template['title'] = "Team";
+    $template['breadcrumbs'] = array(
+      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Team", "link" => "?page=admin/Team"]
+    );
     $template['page'] = $this->view('admin/team/index', array(), TRUE);
     $this->view("admin/template", $template);
   }

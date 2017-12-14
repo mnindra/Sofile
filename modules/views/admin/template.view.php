@@ -55,7 +55,16 @@
     <div class="container">
       <div class="row content">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+          <h1><?= $title ?></h1>
+          <nav class="breadcrumb">
+            <?php foreach ($breadcrumbs as $item) { ?>
+              <a class="breadcrumb-item" href="<?= SITE_URL . $item['link'] ?>"><?= $item['label'] ?></a>
+            <?php } ?>
+          </nav>
+
           <?= $page ?>
+
         </div>
       </div>
     </div><!-- /.container -->
