@@ -57,8 +57,11 @@ class Eloquent extends Model {
 
   public function create($data) {
     $insert_data = [];
-    foreach ($this->fillable as $item) {
-      $insert_data[$item] = $data[$item];
+
+    foreach ($data as $key => $value) {
+      if(in_array($key, $this->fillable)) {
+        $insert_data[$key] = $value;
+      }
     }
 
     $this->db->insert($this->tableName, $insert_data);
@@ -67,8 +70,11 @@ class Eloquent extends Model {
 
   public function update($data, $id) {
     $update_data = [];
-    foreach ($this->fillable as $item) {
-      $update_data[$item] = $data[$item];
+
+    foreach ($data as $key => $value) {
+      if(in_array($key, $this->fillable)) {
+        $update_data[$key] = $value;
+      }
     }
 
     $this->db->where($this->primaryKey . ' = ' . $id);

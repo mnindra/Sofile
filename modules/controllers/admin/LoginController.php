@@ -19,7 +19,7 @@ class LoginController extends Controller
   {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
-    $data = $this->User->where("username = '$username' AND '$password'");
+    $data = $this->User->where("username = '$username' AND password = '$password'");
 
     if(count($data) == 1) {
       $this->setSession('user', $data[0]);

@@ -13,7 +13,6 @@ class UserModel extends Eloquent {
     'phone',
     'email',
     'username',
-    'password',
-    'last_login'
+    'password'
   ];
 }
