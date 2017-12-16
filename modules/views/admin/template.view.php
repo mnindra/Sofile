@@ -61,6 +61,12 @@
               User <span class="sr-only">(current)</span>
             </a>
           </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Project' ?>">
+              Project <span class="sr-only">(current)</span>
+            </a>
+          </li>
         </ul>
           <a class="btn btn-danger my-2 my-sm-0" href="<?= SITE_URL . '?page=admin/Login&action=logout' ?>">Logout</a>
       </div>
