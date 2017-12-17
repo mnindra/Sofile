@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col-md-8 col-lg-8">
+  <div class="col-md-9 col-lg-9">
     <table id="table-data" class="table table-hover table-striped">
       <thead>
       <tr>
@@ -16,7 +16,7 @@
     </table>
   </div>
 
-  <div class="col-md-4 col-lg-4">
+  <div class="col-md-3 col-lg-3">
     <form action="" id="formCreate">
       <div class="card" style="width: 20rem;">
         <div class="card-body">
@@ -136,6 +136,11 @@
                   <button type="button" class="btn btn-primary" data-toggle="modal" onclick="show_edit_form(${row.project_id})">Edit</button>
                   <button type="button" class="btn btn-danger" onclick="destroy(${row.project_id})">Delete</button>
                 </div>
+
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-dark" data-toggle="modal" onclick="gotoTeam(${row.project_id})">Team</button>
+                  <button type="button" class="btn btn-success" onclick="destroy(${row.project_id})">Testimonial</button>
+                </div>
               </td>
             </tr>
           `);
@@ -194,6 +199,10 @@
         });
 
         $('#form_edit').modal('show');
+    };
+
+    let gotoTeam = (id) => {
+        window.location = '<?= SITE_URL ?>?page=admin/ProjectTeam&id=' + id;
     };
 
     load_data();
