@@ -139,7 +139,7 @@
 
                 <div class="btn-group btn-group-sm">
                   <button type="button" class="btn btn-dark" data-toggle="modal" onclick="gotoTeam(${row.project_id})">Team</button>
-                  <button type="button" class="btn btn-success" onclick="destroy(${row.project_id})">Testimonial</button>
+                  <button type="button" class="btn btn-success" onclick="gotoTestimonial(${row.project_id})">Testimonial</button>
                 </div>
               </td>
             </tr>
@@ -203,6 +203,10 @@
 
     let gotoTeam = (id) => {
         window.location = '<?= SITE_URL ?>?page=admin/ProjectTeam&id=' + id;
+    };
+
+    let gotoTestimonial = (id) => {
+        window.location = '<?= SITE_URL ?>?page=admin/Testimonial&id=' + id;
     };
 
     load_data();
