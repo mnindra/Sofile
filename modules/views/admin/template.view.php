@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="<?= PATH . 'public/css/bootstrap.min.css' ?>">
     <!--  Datatables  -->
     <link rel="stylesheet" href="<?= PATH . 'public/css/dataTables.bootstrap4.min.css' ?>">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?= PATH . 'public/css/custom.css' ?>">
     <!-- Material Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="<?= PATH . '/public/js/jquery-3.2.1.min.js' ?>"></script>
@@ -29,55 +31,63 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Home' ?>">
-              Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Position' ?>">
-              Position <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Team' ?>">
-              Team <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Service' ?>">
-              Service <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/User' ?>">
-              User <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Project' ?>">
-              Project <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
-          <a class="btn btn-danger my-2 my-sm-0" href="<?= SITE_URL . '?page=admin/Login&action=logout' ?>">Logout</a>
-      </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row content">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-md-2 col-lg-2">
+          <nav class="nav flex-column sidebar">
+            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Home' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">dashboard</i>
+                Dashboard
+              </span>
+            </a>
+
+            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Project' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">library_books</i>
+                Project
+              </span>
+            </a>
+
+            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Team' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">people</i>
+                Team
+              </span>
+            </a>
+
+            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Service' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">devices</i>
+                Service
+              </span>
+            </a>
+
+            <a class="nav-link " href="<?= SITE_URL . '?page=admin/User' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">account_circle</i>
+                User
+              </span>
+            </a>
+
+            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Position' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">nature_people</i>
+                Position
+              </span>
+            </a>
+
+            <div class="pr-5 pl-2">
+              <a class="btn btn-danger btn-block" href="<?= SITE_URL . '?page=admin/Login&action=logout' ?>">Logout</a>
+            </div>
+          </nav>
+        </div>
+        <div class="col-md-10 col-lg-10">
 
           <h1><?= $title ?></h1>
-          <nav class="breadcrumb">
+          <nav class="breadcrumb mb-5">
             <?php foreach ($breadcrumbs as $item) { ?>
               <a class="breadcrumb-item" href="<?= SITE_URL . $item['link'] ?>"><?= $item['label'] ?></a>
             <?php } ?>

@@ -1,0 +1,22 @@
+.inline-icon {
+    display: flex;
+}
+
+.inline-icon .material-icons {
+    margin-right: 5px;
+}
+
+.sidebar {
+    border-right: solid 1px #eeeeee;
+}
+
+.sidebar .nav-link {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/*@media only screen and (max-width: 768px)  {*/
+    /*.sidebar {*/
+        /*display: none;*/
+    /*}*/
+/*}*/

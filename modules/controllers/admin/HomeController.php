@@ -4,9 +4,9 @@ class HomeController extends AdminController
 {
   public function index()
   {
-    $template['title'] = "Home";
+    $template['title'] = "Dashboard";
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"]
+      ["label" => "Dashboard", "link" => "?page=admin/Home"]
     );
     $template['page'] = $this->view('admin/home/index', array(), TRUE);
     $this->view("admin/template", $template);
