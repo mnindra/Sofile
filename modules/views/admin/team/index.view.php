@@ -60,6 +60,8 @@
 </div>
 
 <script>
+    window.activePage = "team";
+
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Team&action=all' ?>", (data) => {
             $("#table-body").empty();

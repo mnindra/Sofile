@@ -37,42 +37,42 @@
       <div class="row content">
         <div class="col-md-2 col-lg-2" id="sidebar-container">
           <nav class="nav flex-column sidebar" id="sidebar">
-            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Home' ?>">
+            <a class="nav-link" id="dashboard" href="<?= SITE_URL . '?page=admin/Home' ?>">
               <span class="inline-icon">
                 <i class="material-icons">dashboard</i>
                 Dashboard
               </span>
             </a>
 
-            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Project' ?>">
+            <a class="nav-link" id="project" href="<?= SITE_URL . '?page=admin/Project' ?>">
               <span class="inline-icon">
                 <i class="material-icons">library_books</i>
                 Project
               </span>
             </a>
 
-            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Team' ?>">
+            <a class="nav-link" id="team" href="<?= SITE_URL . '?page=admin/Team' ?>">
               <span class="inline-icon">
                 <i class="material-icons">people</i>
                 Team
               </span>
             </a>
 
-            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Service' ?>">
+            <a class="nav-link" id="service" href="<?= SITE_URL . '?page=admin/Service' ?>">
               <span class="inline-icon">
                 <i class="material-icons">devices</i>
                 Service
               </span>
             </a>
 
-            <a class="nav-link " href="<?= SITE_URL . '?page=admin/User' ?>">
+            <a class="nav-link" id="user" href="<?= SITE_URL . '?page=admin/User' ?>">
               <span class="inline-icon">
                 <i class="material-icons">account_circle</i>
                 User
               </span>
             </a>
 
-            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Position' ?>">
+            <a class="nav-link" id="position" href="<?= SITE_URL . '?page=admin/Position' ?>">
               <span class="inline-icon">
                 <i class="material-icons">nature_people</i>
                 Position
@@ -113,12 +113,14 @@
     <script>
         $(document).ready(function() {
             $('#table-data').DataTable();
+
+            $(`#${window.activePage}`).toggleClass("active");
         });
 
         let toggleSidebar = () => {
             $( "#sidebar" ).toggleClass("d-flex");
             $( "#sidebar-container" ).toggleClass("mb-3");
-        }
+        };
     </script>
   </body>
 </html>

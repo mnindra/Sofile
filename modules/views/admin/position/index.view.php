@@ -84,6 +84,8 @@
 </div>
 
 <script>
+    window.activePage = "position";
+
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Position&action=all' ?>", (data) => {
             $("#table-body").empty();

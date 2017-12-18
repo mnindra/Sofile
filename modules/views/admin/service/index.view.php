@@ -70,6 +70,8 @@
 </div>
 
 <script>
+    window.activePage = "service";
+
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Service&action=all' ?>", (data) => {
             $("#table-body").empty();

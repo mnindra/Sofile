@@ -118,6 +118,8 @@
 </div>
 
 <script>
+    window.activePage = "project";
+
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Project&action=all' ?>", (data) => {
             $("#table-body").empty();

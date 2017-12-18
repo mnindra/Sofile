@@ -254,6 +254,8 @@
 </div>
 
 <script>
+    window.activePage = "user";
+
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/User&action=all' ?>", (data) => {
             $("#table-body").empty();
