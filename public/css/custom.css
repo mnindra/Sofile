@@ -15,8 +15,16 @@
     color: #007bff;
 }
 
-/*@media only screen and (max-width: 768px)  {*/
-    /*.sidebar {*/
-        /*display: none;*/
-    /*}*/
-/*}*/
+.sidebar .nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+        border-right: none;
+        border-bottom: solid 1px #eeeeee;
+        padding-bottom: 20px;
+    }
+}

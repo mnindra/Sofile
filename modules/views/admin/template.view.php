@@ -28,15 +28,15 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Sofile Administrator</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" onclick="toggleSidebar()" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
 
     <div class="container-fluid">
       <div class="row content">
-        <div class="col-md-2 col-lg-2">
-          <nav class="nav flex-column sidebar">
+        <div class="col-md-2 col-lg-2" id="sidebar-container">
+          <nav class="nav flex-column sidebar" id="sidebar">
             <a class="nav-link " href="<?= SITE_URL . '?page=admin/Home' ?>">
               <span class="inline-icon">
                 <i class="material-icons">dashboard</i>
@@ -44,7 +44,7 @@
               </span>
             </a>
 
-            <a class="nav-link " href="<?= SITE_URL . '?page=admin/Project' ?>">
+            <a class="nav-link" href="<?= SITE_URL . '?page=admin/Project' ?>">
               <span class="inline-icon">
                 <i class="material-icons">library_books</i>
                 Project
@@ -79,9 +79,13 @@
               </span>
             </a>
 
-            <div class="pr-5 pl-2">
-              <a class="btn btn-danger btn-block" href="<?= SITE_URL . '?page=admin/Login&action=logout' ?>">Logout</a>
-            </div>
+
+            <a class="nav-link" style="color: #ff4538" href="<?= SITE_URL . '?page=admin/Login&action=logout' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">exit_to_app</i>
+                Logout
+              </span>
+            </a>
           </nav>
         </div>
         <div class="col-md-10 col-lg-10">
@@ -110,6 +114,11 @@
         $(document).ready(function() {
             $('#table-data').DataTable();
         });
+
+        let toggleSidebar = () => {
+            $( "#sidebar" ).toggleClass("d-flex");
+            $( "#sidebar-container" ).toggleClass("mb-3");
+        }
     </script>
   </body>
 </html>
