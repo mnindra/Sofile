@@ -27,7 +27,7 @@
             <label for="service_id">Service Name</label>
             <div>
               <select id="service_id" class="custom-select" required>
-                <option selected>Select Project Service</option>
+                <option selected disabled>Select Project Service</option>
                 <?php foreach ($service as $item) { ?>
                   <option value="<?= $item->service_id ?>"><?= $item->service ?></option>
                 <?php } ?>
@@ -75,7 +75,7 @@
             <label for="service_id_edit">Service Name</label>
             <div>
               <select id="service_id_edit" class="custom-select" required>
-                <option selected>Select Project Service</option>
+                <option selected disabled>Select Project Service</option>
                 <?php foreach ($service as $item) { ?>
                   <option value="<?= $item->service_id ?>"><?= $item->service ?></option>
                 <?php } ?>

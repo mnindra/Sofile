@@ -72,7 +72,7 @@
                 <label for="position_id">Position</label>
                 <div>
                   <select id="position_id" class="custom-select" required>
-                    <option selected>Select User Position</option>
+                    <option selected disabled>Select User Position</option>
                     <?php foreach ($position as $item) { ?>
                       <option value="<?= $item->position_id ?>"><?= $item->position ?></option>
                     <?php } ?>
@@ -86,7 +86,7 @@
                 <label for="team_id">Team</label>
                 <div>
                   <select id="team_id" class="custom-select" required>
-                    <option selected>Select User Team</option>
+                    <option selected disabled>Select User Team</option>
                     <?php foreach ($team as $item) { ?>
                       <option value="<?= $item->team_id ?>"><?= $item->team ?></option>
                     <?php } ?>
@@ -197,7 +197,7 @@
                 <label for="position_id_edit">Position</label>
                 <div>
                   <select id="position_id_edit" class="custom-select" required>
-                    <option selected>Select User Position</option>
+                    <option selected disabled>Select User Position</option>
                     <?php foreach ($position as $item) { ?>
                       <option value="<?= $item->position_id ?>"><?= $item->position ?></option>
                     <?php } ?>
@@ -211,7 +211,7 @@
                 <label for="team_id_edit">Team</label>
                 <div>
                   <select id="team_id_edit" class="custom-select" required>
-                    <option selected>Select User Team</option>
+                    <option selected disabled>Select User Team</option>
                     <?php foreach ($team as $item) { ?>
                       <option value="<?= $item->team_id ?>"><?= $item->team ?></option>
                     <?php } ?>

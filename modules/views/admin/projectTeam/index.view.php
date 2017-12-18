@@ -26,7 +26,7 @@
             <label for="team_id">Team Name</label>
             <div>
               <select id="team_id" class="custom-select" required>
-                <option selected>Select Team Name</option>
+                <option selected disabled>Select Team Name</option>
               </select>
             </div>
           </div>
