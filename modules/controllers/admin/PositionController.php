@@ -5,7 +5,7 @@ class PositionController extends AdminController
   public function index() {
     $template['title'] = "Position";
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Position", "link" => "?page=admin/Position"]
     );
     $template['page'] = $this->view('admin/position/index', array(), TRUE);

@@ -8,7 +8,7 @@ class ProjectTeamController extends AdminController
 
     $template['title'] = "Manage Team for " . $project->title;
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Project", "link" => "?page=admin/Project"],
       ["label" => "Teams", "link" => ""],
     );

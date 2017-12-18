@@ -5,7 +5,7 @@ class ServiceController extends AdminController
   public function index() {
     $template['title'] = "Service";
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Service", "link" => "?page=admin/Service"]
     );
     $template['page'] = $this->view('admin/service/index', array(), TRUE);

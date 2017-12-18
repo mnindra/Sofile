@@ -8,7 +8,7 @@ class TestimonialController extends AdminController
 
     $template['title'] = "Testimonial for " . $project->title;
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Project", "link" => "?page=admin/Project"],
       ["label" => "Testimonials", "link" => ""],
     );

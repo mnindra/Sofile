@@ -5,7 +5,7 @@ class TeamController extends AdminController
   public function index() {
     $template['title'] = "Team";
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Team", "link" => "?page=admin/Team"]
     );
     $template['page'] = $this->view('admin/team/index', array(), TRUE);

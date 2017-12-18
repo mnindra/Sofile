@@ -8,7 +8,7 @@ class UserController extends AdminController
 
     $template['title'] = "User";
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "User", "link" => "?page=admin/User"]
     );
     $template['page'] = $this->view('admin/user/index', $page, TRUE);

@@ -7,7 +7,7 @@ class ProjectController extends AdminController
 
     $template['title'] = "Project";
     $template['breadcrumbs'] = array(
-      ["label" => "Home", "link" => "?page=admin/Home"],
+      ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Project", "link" => "?page=admin/Project"]
     );
     $template['page'] = $this->view('admin/project/index', $page, TRUE);
