@@ -17,7 +17,7 @@
 
   <div class="col-md-3 col-lg-3">
     <form action="" id="formCreate">
-      <div class="card" style="width: 20rem;">
+      <div class="card">
         <div class="card-body">
           <h4 class="card-title">Create Testimonial</h4>
           <p class="card-text">Create a new testimonial</p>

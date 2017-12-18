@@ -91,6 +91,7 @@
         <div class="col-md-10 col-lg-10">
 
           <h1><?= $title ?></h1>
+          <p class="text-muted"><?= $description ?></p>
           <nav class="breadcrumb mb-5">
             <?php foreach ($breadcrumbs as $item) { ?>
               <a class="breadcrumb-item" href="<?= SITE_URL . $item['link'] ?>"><?= $item['label'] ?></a>

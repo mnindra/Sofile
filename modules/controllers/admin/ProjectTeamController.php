@@ -7,6 +7,7 @@ class ProjectTeamController extends AdminController
     $project = $this->Project->find($project_id);
 
     $template['title'] = "Manage Team for " . $project->title;
+    $template['description'] = "Manage team that handle this project";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Project", "link" => "?page=admin/Project"],

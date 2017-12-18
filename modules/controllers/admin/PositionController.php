@@ -4,6 +4,7 @@ class PositionController extends AdminController
 {
   public function index() {
     $template['title'] = "Position";
+    $template['description'] = "Manage user position in company";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Position", "link" => "?page=admin/Position"]

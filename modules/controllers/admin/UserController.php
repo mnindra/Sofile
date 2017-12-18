@@ -7,6 +7,7 @@ class UserController extends AdminController
     $page['team'] = $this->Team->all();
 
     $template['title'] = "User";
+    $template['description'] = "Manage user in company";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "User", "link" => "?page=admin/User"]

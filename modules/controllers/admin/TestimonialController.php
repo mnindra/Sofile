@@ -7,6 +7,7 @@ class TestimonialController extends AdminController
     $project = $this->Project->find($id_project);
 
     $template['title'] = "Testimonial for " . $project->title;
+    $template['description'] = "Manage project's testimonial";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Project", "link" => "?page=admin/Project"],

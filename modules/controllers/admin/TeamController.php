@@ -4,6 +4,7 @@ class TeamController extends AdminController
 {
   public function index() {
     $template['title'] = "Team";
+    $template['description'] = "Manage team in company";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Team", "link" => "?page=admin/Team"]

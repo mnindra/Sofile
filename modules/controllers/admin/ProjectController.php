@@ -6,6 +6,7 @@ class ProjectController extends AdminController
     $page['service'] = $this->Service->all();
 
     $template['title'] = "Project";
+    $template['description'] = "Manage all project in company";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Project", "link" => "?page=admin/Project"]

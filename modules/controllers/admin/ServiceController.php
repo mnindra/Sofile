@@ -4,6 +4,7 @@ class ServiceController extends AdminController
 {
   public function index() {
     $template['title'] = "Service";
+    $template['description'] = "Manage service in company";
     $template['breadcrumbs'] = array(
       ["label" => "Dashboard", "link" => "?page=admin/Home"],
       ["label" => "Service", "link" => "?page=admin/Service"]
