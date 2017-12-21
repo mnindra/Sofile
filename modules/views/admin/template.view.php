@@ -79,6 +79,12 @@
               </span>
             </a>
 
+            <a class="nav-link" id="setting" href="<?= SITE_URL . '?page=admin/Setting' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">settings</i>
+                Setting
+              </span>
+            </a>
 
             <a class="nav-link" style="color: #ff4538" href="<?= SITE_URL . '?page=admin/Login&action=logout' ?>">
               <span class="inline-icon">

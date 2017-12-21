@@ -14,5 +14,6 @@ class AdminController extends Controller
     $this->model("Project");
     $this->model("ProjectTeam");
     $this->model("Testimonial");
+    $this->model("Setting");
   }
 }
