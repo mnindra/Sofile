@@ -79,6 +79,13 @@
               </span>
             </a>
 
+            <a class="nav-link" id="message" href="<?= SITE_URL . '?page=admin/Message' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">message</i>
+                Message
+              </span>
+            </a>
+
             <a class="nav-link" id="setting" href="<?= SITE_URL . '?page=admin/Setting' ?>">
               <span class="inline-icon">
                 <i class="material-icons">settings</i>
@@ -117,6 +124,7 @@
     <script src="<?= PATH . '/public/js/bootstrap.bundle.min.js' ?>"></script>
     <script src="<?= PATH . '/public/js/jquery.dataTables.min.js' ?>"></script>
     <script src="<?= PATH . '/public/js/dataTables.bootstrap4.min.js' ?>"></script>
+    <script src="<?= PATH . '/public/js/jquery-dateFormat.min.js' ?>"></script>
     <script>
         $(document).ready(function() {
             $('#table-data').DataTable();
