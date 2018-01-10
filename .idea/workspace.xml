@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d08fbc2b-6e81-4921-9626-77ca8cea2751" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/modules/controllers/HomeController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/modules/views/user/home/index.view.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/modules/controllers/MessageController.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/home/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/home/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/message/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/message/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/position/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/position/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/project/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/project/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/projectTeam/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/projectTeam/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/service/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/service/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/setting/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/setting/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/team/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/team/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/template.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/template.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/user/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/user/index.view.php" />
+      <change beforePath="$PROJECT_DIR$/modules/models/MessageModel.php" afterPath="$PROJECT_DIR$/modules/models/MessageModel.php" />
+      <change beforePath="$PROJECT_DIR$/modules/views/user/home/index.view.php" afterPath="$PROJECT_DIR$/modules/views/user/home/index.view.php" />
+      <change beforePath="$PROJECT_DIR$/modules/views/user/template.view.php" afterPath="$PROJECT_DIR$/modules/views/user/template.view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,22 +32,67 @@
       <file leaf-file-name="template.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/views/user/template.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="-198">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageModel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/models/MessageModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/controllers/MessageController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PositionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/controllers/admin/PositionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="22" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/views/user/home/index.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
+            <state relative-caret-position="120">
+              <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
               <folding>
                 <element signature="n#section#1;n#!!top" expanded="false" />
                 <element signature="n#section#2;n#!!top" expanded="false" />
-                <marker date="1515575158078" expanded="false" signature="433:1188" ph="..." />
+                <marker date="1515576443601" expanded="false" signature="433:1188" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/views/admin/position/index.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="111" column="4" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="124" selection-end-column="6" />
+              <folding>
+                <element signature="e#3910#4359#0#HTML" expanded="false" />
+                <marker date="1515573133687" expanded="true" signature="3279:3835" ph="..." />
+                <marker date="1515573133687" expanded="true" signature="3461:3817" ph="..." />
+                <marker date="1515573133687" expanded="true" signature="3514:3797" ph="..." />
               </folding>
             </state>
           </provider>
@@ -73,16 +109,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>:</find>
-      <find>select</find>
-      <find>testimonial</find>
       <find>selected</find>
       <find>card</find>
       <find>span</find>
       <find>d-flex</find>
       <find>bread</find>
       <find>sidebar</find>
-      <find>button</find>
       <find>Logout</find>
       <find>Home</find>
       <find>nav</find>
@@ -103,6 +135,10 @@
       <find>#service</find>
       <find>active</find>
       <find>copy</find>
+      <find>priva</find>
+      <find>send message</find>
+      <find>id=&quot;title&quot;</find>
+      <find>button</find>
     </findStrings>
     <replaceStrings>
       <replace>selected disabled</replace>
@@ -146,7 +182,6 @@
         <option value="$PROJECT_DIR$/modules/models/SettingModel.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/SettingController.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/modules/models/MessageModel.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/AdminController.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/MessageController.php" />
         <option value="$PROJECT_DIR$/modules/controllers/HomeController.php" />
@@ -162,7 +197,9 @@
         <option value="$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php" />
         <option value="$PROJECT_DIR$/modules/views/admin/user/index.view.php" />
         <option value="$PROJECT_DIR$/modules/views/user/template.view.php" />
+        <option value="$PROJECT_DIR$/modules/controllers/MessageController.php" />
         <option value="$PROJECT_DIR$/modules/views/user/home/index.view.php" />
+        <option value="$PROJECT_DIR$/modules/models/MessageModel.php" />
       </list>
     </option>
   </component>
@@ -217,6 +254,12 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Sofile" type="cbb8eebc:String" user="Sofile" />
               <item name="modules" type="cbb8eebc:String" user="modules" />
+              <item name="models" type="cbb8eebc:String" user="models" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Sofile" type="cbb8eebc:String" user="Sofile" />
+              <item name="modules" type="cbb8eebc:String" user="modules" />
               <item name="views" type="cbb8eebc:String" user="views" />
             </path>
             <path>
@@ -224,15 +267,15 @@
               <item name="Sofile" type="cbb8eebc:String" user="Sofile" />
               <item name="modules" type="cbb8eebc:String" user="modules" />
               <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="user" type="cbb8eebc:String" user="user" />
+              <item name="admin" type="cbb8eebc:String" user="admin" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Sofile" type="cbb8eebc:String" user="Sofile" />
               <item name="modules" type="cbb8eebc:String" user="modules" />
               <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="user" type="cbb8eebc:String" user="user" />
-              <item name="home" type="cbb8eebc:String" user="home" />
+              <item name="admin" type="cbb8eebc:String" user="admin" />
+              <item name="position" type="cbb8eebc:String" user="position" />
             </path>
           </expand>
           <select />
@@ -378,12 +421,12 @@
       <workItem from="1514294874695" duration="239000" />
       <workItem from="1515045541771" duration="15408000" />
       <workItem from="1515325965518" duration="24000" />
-      <workItem from="1515567208723" duration="6442000" />
+      <workItem from="1515567208723" duration="7755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115385000" />
+    <option name="totallyTimeSpent" value="116698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="51" width="1376" height="694" extended-state="6" />
@@ -446,13 +489,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/controllers/admin/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -542,13 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controllers/admin/PositionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -650,14 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/models/MessageModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/eloquent.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -713,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/views/admin/home/index.view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -738,18 +751,6 @@
             <marker date="1515573133923" expanded="true" signature="3560:4058" ph="..." />
             <marker date="1515573133923" expanded="true" signature="3613:3680" ph="..." />
             <marker date="1515573133923" expanded="true" signature="3613:4038" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/views/admin/position/index.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
-          <folding>
-            <marker date="1515573133687" expanded="true" signature="3279:3835" ph="..." />
-            <marker date="1515573133687" expanded="true" signature="3461:3817" ph="..." />
-            <marker date="1515573133687" expanded="true" signature="3514:3797" ph="..." />
           </folding>
         </state>
       </provider>
@@ -844,23 +845,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controllers/admin/PositionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controllers/MessageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/views/user/template.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        <state relative-caret-position="-198">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/views/admin/position/index.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="111" column="4" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="124" selection-end-column="6" />
+          <folding>
+            <element signature="e#3910#4359#0#HTML" expanded="false" />
+            <marker date="1515573133687" expanded="true" signature="3279:3835" ph="..." />
+            <marker date="1515573133687" expanded="true" signature="3461:3817" ph="..." />
+            <marker date="1515573133687" expanded="true" signature="3514:3797" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/views/user/home/index.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
           <folding>
             <element signature="n#section#1;n#!!top" expanded="false" />
             <element signature="n#section#2;n#!!top" expanded="false" />
-            <marker date="1515575158078" expanded="false" signature="433:1188" ph="..." />
+            <marker date="1515576443601" expanded="false" signature="433:1188" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/models/MessageModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

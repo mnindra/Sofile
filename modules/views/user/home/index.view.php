@@ -97,32 +97,40 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <form id="contactForm" name="sentMessage" novalidate>
+        <form id="formCreate">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                <input class="form-control" id="name" type="text" placeholder="Your Name *">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                <input class="form-control" id="company" type="text" placeholder="Your Company *">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                <input class="form-control" id="email" type="email" placeholder="Your Email *">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                <input class="form-control" id="title" type="text" placeholder="Title">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="content" placeholder="Your Message *"></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+              <button type="button" onclick="create()" id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase">Send Message</button>
             </div>
           </div>
         </form>
@@ -130,3 +138,26 @@
     </div>
   </div>
 </section>
+
+<script>
+    let create = () => {
+        let name = $("#name").val();
+        let company = $("#company").val();
+        let email = $("#email").val();
+        let phone = $("#phone").val();
+        let title = $("#title").val();
+        let content = $("#content").val();
+        $.post("<?= SITE_URL . '?page=Message&action=store' ?>", {
+            name,
+            company,
+            email,
+            phone,
+            title,
+            content,
+        }, (data) => {
+            $("#formCreate").trigger("reset");
+            console.log(data);
+            alert('Message Sent');
+        });
+    };
+</script>

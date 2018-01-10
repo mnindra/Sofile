@@ -5,6 +5,7 @@ class MessageModel extends Eloquent {
   protected $primaryKey = "message_id";
   protected $fillable = [
     'type',
+    'title',
     'name',
     'email',
     'phone',
