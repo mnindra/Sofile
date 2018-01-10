@@ -1,3 +1,3 @@
 <script>
-  window.activePage = "dashboard";
+  window.activePage = "dashboard_menu";
 </script>

@@ -254,7 +254,7 @@
 </div>
 
 <script>
-    window.activePage = "user";
+    window.activePage = "user_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/User&action=all' ?>", (data) => {

@@ -38,7 +38,7 @@
 </div>
 
 <script>
-    window.activePage = "setting";
+    window.activePage = "setting_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Setting&action=all' ?>", (data) => {

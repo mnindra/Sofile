@@ -103,7 +103,7 @@
 </div>
 
 <script>
-    window.activePage = "project";
+    window.activePage = "project_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Testimonial&action=all&id=' . $_GET['id'] ?>", (data) => {

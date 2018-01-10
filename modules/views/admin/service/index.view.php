@@ -70,7 +70,7 @@
 </div>
 
 <script>
-    window.activePage = "service";
+    window.activePage = "service_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Service&action=all' ?>", (data) => {
@@ -97,6 +97,7 @@
     let create = () => {
         let service = $("#service").val();
         let service_description = $("#service_description").val();
+
         $.post("<?= SITE_URL . '?page=admin/Service&action=store' ?>", {
             service,
             service_description

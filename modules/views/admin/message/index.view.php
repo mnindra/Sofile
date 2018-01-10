@@ -89,7 +89,7 @@
 </div>
 
 <script>
-    window.activePage = "message";
+    window.activePage = "message_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Message&action=all' ?>", (data) => {

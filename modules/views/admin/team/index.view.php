@@ -60,7 +60,7 @@
 </div>
 
 <script>
-    window.activePage = "team";
+    window.activePage = "team_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Team&action=all' ?>", (data) => {

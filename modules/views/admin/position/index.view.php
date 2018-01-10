@@ -84,7 +84,7 @@
 </div>
 
 <script>
-    window.activePage = "position";
+    window.activePage = "position_menu";
 
     let load_data = () => {
         $.get("<?= SITE_URL . '?page=admin/Position&action=all' ?>", (data) => {
