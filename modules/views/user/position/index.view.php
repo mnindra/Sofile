@@ -34,21 +34,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Contact Us</h2>
+        <h2 class="section-heading text-uppercase">Apply For Position</h2>
         <h3 class="section-subheading text-muted">Tell Us Who You Are</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <form id="formCreate">
+        <form id="formCreate" enctype="multipart/form-data">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <input class="form-control" id="name" type="text" placeholder="Your Name *">
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input class="form-control" id="company" type="text" placeholder="Your Company *">
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
@@ -88,25 +84,32 @@
 
 <script>
     let create = () => {
-        let name = $("#name").val();
-        let company = $("#company").val();
-        let email = $("#email").val();
-        let phone = $("#phone").val();
-        let title = $("#title").val();
-        let content = $("#content").val();
-        let file = $("#file").prop('files')[0];
-        $.post("<?= SITE_URL . '?page=Message&action=store' ?>", {
-            name,
-            company,
-            email,
-            phone,
-            title,
-            content,
-            job_app: 1
-        }, (data) => {
-            $("#formCreate").trigger("reset");
-            console.log(data);
-            alert('Message Sent');
-        });
+
+        let file = $('#file')[0].files[0];
+
+        if(file.type == 'application/pdf') {
+          let formData = new FormData();
+          formData.append('name', $("#name").val());
+          formData.append('email', $("#email").val());
+          formData.append('phone', $("#phone").val());
+          formData.append('title', $("#title").val());
+          formData.append('content', $("#content").val());
+          formData.append('job_app', 1);
+          formData.append('file', file);
+
+          $.ajax({
+            url: '<?= SITE_URL ?>?page=Message&action=store',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+              $("#formCreate").trigger('reset');
+              alert('Message Sent');
+            }
+          })
+        } else {
+          alert('please choose pdf file');
+        }
     };
 </script>

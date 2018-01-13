@@ -7,7 +7,6 @@
         <th>Date</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Company</th>
         <th>Action</th>
       </tr>
       </thead>
@@ -45,11 +44,6 @@
             <p class="small text-muted">
               <span class="inline-icon text-right">
                 <span id="email">mnindrazaka@gmail.com</span>
-              </span>
-            </p>
-            <p class="small text-muted">
-              <span class="inline-icon text-right">
-                <span id="company">pt zaka</span>
               </span>
             </p>
             <p class="small text-muted">
@@ -102,7 +96,6 @@
               <td>${$.format.date(row.datetime, 'dd/MM/yyyy on hh:mm')}</td>
               <td>${row.name}</td>
               <td>${row.email}</td>
-              <td>${row.company}</td>
               <td>
                 <div class="btn-group btn-group-sm">
                   <button type="button" class="btn btn-secondary" data-toggle="modal" onclick="seeAttachment('${row.file}')">Attachment</button>

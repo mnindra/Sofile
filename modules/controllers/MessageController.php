@@ -9,7 +9,7 @@ class MessageController extends Controller
   public function store() {
     $tmp = $_FILES['file']['tmp_name'];
     $filename = uniqid() . '.pdf';
-    move_uploaded_file($tmp, $filename);
+    move_uploaded_file($tmp, 'public/upload/' . $filename);
 
     $_POST['file'] = $filename;
     $this->Message->create($_POST);

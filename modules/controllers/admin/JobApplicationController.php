@@ -24,6 +24,8 @@ class JobApplicationController extends AdminController
   }
 
   public function destroy($id) {
+    $data = $this->Message->find($id);
+    unlink('public/upload/' . $data->file);
     $this->Message->destroy($id);
   }
 }
