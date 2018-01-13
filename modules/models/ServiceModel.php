@@ -6,5 +6,6 @@ class ServiceModel extends Eloquent {
   protected $fillable = [
     'service',
     'service_description',
+    'service_icon'
   ];
 }

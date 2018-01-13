@@ -1,86 +1,29 @@
 <!-- Header -->
-<header class="masthead">
+<header class="masthead" style="background-image: url('<?= PATH ?>public/img/header-bg2.jpg')">
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in">Welcome To <?= $setting->company ?></div>
-      <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-<!--      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>-->
+      <div class="intro-lead-in">We Are Open Minded</div>
+      <div class="intro-heading text-uppercase">Come Join Us</div>
+      <!--      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>-->
     </div>
   </div>
 </header>
 
-<!-- Services -->
-<section id="services">
+<!-- Position -->
+<section class="bg-light" id="position">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Services</h2>
-        <h3 class="section-subheading text-muted">Our Best Service For You</h3>
-      </div>
-    </div>
-    <div class="row text-center">
-      <?php foreach ($service as $item) { ?>
-      <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa <?= $item->service_icon ?> fa-stack-1x fa-inverse"></i>
-            </span>
-        <h4 class="service-heading"><?= $item->service ?></h4>
-        <p class="text-muted"><?= $item->service_description ?></p>
-      </div>
-      <?php } ?>
-    </div>
-  </div>
-</section>
-
-<!-- Portfolio Grid -->
-<section class="bg-light" id="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Portfolio</h2>
-        <h3 class="section-subheading text-muted">Our Best Works We Have Done</h3>
-      </div>
-    </div>
-    <div class="row">
-      <?php foreach ($project as $item) { ?>
-      <div class="col-md-4 col-sm-6 portfolio-item">
-        <a class="portfolio-link" href="<?= $item->link ?>">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <i class="fa fa-plus fa-3x"></i>
-            </div>
+      <?php foreach ($position as $item) { ?>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="<?= PATH ?>public/img/team/1.jpg" alt="">
+            <h4><?= $item->position ?></h4>
+            <p class="text-muted"><?= $item->position_description ?></p>
+            <?php if($item->open == 1) { ?>
+            <p style="color: #1db86c">Open Position</p>
+            <?php } ?>
           </div>
-          <img class="img-fluid" src="<?= PATH ?>public/img/portfolio/02-thumbnail.jpg" alt="">
-        </a>
-        <div class="portfolio-caption">
-          <h4><?= $item->title ?></h4>
-          <p class="text-muted"><?= $item->project_description ?></p>
         </div>
-      </div>
-      <?php } ?>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonial -->
-<section class="bg-light" id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">What Our Clients Say</h2>
-      </div>
-    </div>
-    <div class="row">
-      <?php foreach ($testimonial as $item) { ?>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img class="mx-auto rounded-circle" src="<?= PATH ?>public/img/team/1.jpg" alt="">
-          <h4><?= $item->name ?></h4>
-          <p class="text-muted"><?= $item->company ?></p>
-          <p class="text-muted"><?= $item->testimonial ?></p>
-        </div>
-      </div>
       <?php } ?>
     </div>
   </div>
@@ -92,7 +35,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Contact Us</h2>
-        <h3 class="section-subheading text-muted">Tell Us What You Need</h3>
+        <h3 class="section-subheading text-muted">Tell Us Who You Are</h3>
       </div>
     </div>
     <div class="row">
@@ -159,6 +102,7 @@
             phone,
             title,
             content,
+            job_app: 1
         }, (data) => {
             $("#formCreate").trigger("reset");
             console.log(data);

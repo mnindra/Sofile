@@ -86,6 +86,13 @@
               </span>
             </a>
 
+            <a class="nav-link" id="job_application_menu" href="<?= SITE_URL . '?page=admin/JobApplication' ?>">
+              <span class="inline-icon">
+                <i class="material-icons">work</i>
+                Job Application
+              </span>
+            </a>
+
             <a class="nav-link" id="setting_menu" href="<?= SITE_URL . '?page=admin/Setting' ?>">
               <span class="inline-icon">
                 <i class="material-icons">settings</i>
@@ -121,10 +128,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?= PATH . '/public/js/bootstrap.bundle.min.js' ?>"></script>
-    <script src="<?= PATH . '/public/js/jquery.dataTables.min.js' ?>"></script>
-    <script src="<?= PATH . '/public/js/dataTables.bootstrap4.min.js' ?>"></script>
-    <script src="<?= PATH . '/public/js/jquery-dateFormat.min.js' ?>"></script>
+    <script src="<?= PATH . 'public/js/bootstrap.bundle.min.js' ?>"></script>
+    <script src="<?= PATH . 'public/js/jquery.dataTables.min.js' ?>"></script>
+    <script src="<?= PATH . 'public/js/dataTables.bootstrap4.min.js' ?>"></script>
+    <script src="<?= PATH . 'public/js/jquery-dateFormat.min.js' ?>"></script>
     <script>
         $(document).ready(function() {
             $('#table-data').DataTable();

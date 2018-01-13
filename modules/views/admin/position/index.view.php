@@ -73,6 +73,16 @@
             <label for="position_description_edit">Description</label>
             <input type="text" id="position_description_edit" class="form-control" placeholder="Description">
           </div>
+
+          <div class="form-group">
+            <label for="open_edit">Open Position</label>
+            <div>
+              <select id="open_edit" class="custom-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -129,7 +139,8 @@
         $.post("<?= SITE_URL . '?page=admin/Position&action=update&id=' ?>" + id, {
             position: $("#position_edit").val(),
             salary: $("#salary_edit").val(),
-            position_description: $("#position_description_edit").val()
+            position_description: $("#position_description_edit").val(),
+            open: $("#open_edit").val()
         }, (data) => {
             load_data();
             $('#form_edit').modal('hide');
@@ -150,6 +161,7 @@
                $("#position_edit").val(row.position);
                $("#salary_edit").val(row.salary);
                $("#position_description_edit").val(row.position_description);
+               $("#open_edit").val(row.open);
            }
         });
 

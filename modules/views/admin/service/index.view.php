@@ -26,6 +26,10 @@
             <input type="text" id="service" class="form-control" placeholder="Service Name">
           </div>
           <div class="form-group">
+            <label for="service_icon">Icon</label>
+            <input type="text" id="service_icon" class="form-control" placeholder="Service Icon">
+          </div>
+          <div class="form-group">
             <label for="service_description">Description</label>
             <input type="text" id="service_description" class="form-control" placeholder="Service Description">
           </div>
@@ -53,6 +57,11 @@
           <div class="form-group">
             <label for="service_edit">Service</label>
             <input type="text" id="service_edit" class="form-control" placeholder="Service Name">
+          </div>
+
+          <div class="form-group">
+            <label for="service_icon_edit">Icon</label>
+            <input type="text" id="service_icon_edit" class="form-control" placeholder="Service Icon">
           </div>
 
           <div class="form-group">
@@ -97,10 +106,12 @@
     let create = () => {
         let service = $("#service").val();
         let service_description = $("#service_description").val();
+        let service_icon = $("#service_icon").val();
 
         $.post("<?= SITE_URL . '?page=admin/Service&action=store' ?>", {
             service,
-            service_description
+            service_description,
+            service_icon
         }, (data) => {
             load_data();
             $("#formCreate").trigger("reset");
@@ -113,6 +124,7 @@
         $.post("<?= SITE_URL . '?page=admin/Service&action=update&id=' ?>" + id, {
             service: $("#service_edit").val(),
             service_description: $("#service_description_edit").val(),
+            service_icon: $("#service_icon_edit").val()
         }, (data) => {
             load_data();
             $('#form_edit').modal('hide');
@@ -132,6 +144,7 @@
                 $("#service_id_edit").val(row.service_id);
                 $("#service_edit").val(row.service);
                 $("#service_description_edit").val(row.service_description);
+                $("#service_icon_edit").val(row.service_icon);
             }
         });
 

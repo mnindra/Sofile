@@ -4,7 +4,7 @@ class MessageModel extends Eloquent {
   protected $tableName = "message";
   protected $primaryKey = "message_id";
   protected $fillable = [
-    'type',
+    'job_app',
     'title',
     'name',
     'email',
