@@ -19,14 +19,29 @@ class PositionController extends AdminController
   }
 
   public function store() {
+    $photo = uniqid() . ".jpg";
+    move_uploaded_file($_FILES['photo']['tmp_name'], "public/upload/position/" . $photo);
+
+    $_POST['photo'] = $photo;
     $this->Position->create($_POST);
   }
 
   public function update($id) {
+    if (isset($_FILES['photo'])) {
+      $position = $this->Position->find($id);
+      unlink("public/upload/position/" . $position->photo);
+
+      $photo = uniqid() . ".jpg";
+      move_uploaded_file($_FILES['photo']['tmp_name'], "public/upload/position/" . $photo);
+      $_POST['photo'] = $photo;
+    }
+
     $this->Position->update($_POST, $id);
   }
 
   public function destroy($id) {
+    $position = $this->Position->find($id);
+    unlink("public/upload/position/" . $position->photo);
     $this->Position->destroy($id);
   }
 }

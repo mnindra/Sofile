@@ -7,6 +7,7 @@ class PositionModel extends Eloquent {
     'position',
     'salary',
     'position_description',
-    'open'
+    'open',
+    'photo'
   ];
 }

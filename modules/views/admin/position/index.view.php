@@ -37,6 +37,11 @@
             <input type="text" id="position_description" class="form-control" placeholder="Description">
           </div>
 
+          <div class="form-group">
+            <label for="photo">Photo</label>
+            <input type="file" name="photo" id="photo" class="form-control">
+          </div>
+
           <button type="button" class="btn btn-primary" onclick="create()">Submit</button>
 
         </div>
@@ -47,7 +52,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="form_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Position</h5>
@@ -59,28 +64,46 @@
         <form>
           <input type="hidden" id="position_id_edit">
 
-          <div class="form-group">
-            <label for="position_edit">Position</label>
-            <input type="text" id="position_edit" class="form-control" placeholder="Position Name">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="position_edit">Position</label>
+                <input type="text" id="position_edit" class="form-control" placeholder="Position Name">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="salary_edit">Salary</label>
+                <input type="text" id="salary_edit" class="form-control" placeholder="Salary">
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="salary_edit">Salary</label>
-            <input type="text" id="salary_edit" class="form-control" placeholder="Salary">
-          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="position_description_edit">Description</label>
+                <input type="text" id="position_description_edit" class="form-control" placeholder="Description">
+              </div>
 
-          <div class="form-group">
-            <label for="position_description_edit">Description</label>
-            <input type="text" id="position_description_edit" class="form-control" placeholder="Description">
-          </div>
+              <div class="form-group">
+                <label for="open_edit">Open Position</label>
+                <div>
+                  <select id="open_edit" class="custom-select" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <label for="open_edit">Open Position</label>
-            <div>
-              <select id="open_edit" class="custom-select" required>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+            <div class="col-md-6">
+              <div class="form-group">
+                <img src="" alt="" id="img_photo" style="border-radius: 50%; margin: auto; display: block;" width="225" height="225">
+                <br><br>
+                <input type="file" name="photo" id="photo_edit" class="form-control">
+              </div>
             </div>
           </div>
         </form>
@@ -120,31 +143,50 @@
     };
 
     let create = () => {
-        let position = $("#position").val();
-        let salary = $("#salary").val();
-        let position_description = $("#position_description").val();
-        $.post("<?= SITE_URL . '?page=admin/Position&action=store' ?>", {
-            position,
-            salary,
-            position_description
-        }, (data) => {
-            load_data();
-            $("#formCreate").trigger("reset");
-            console.log(data);
+        let formData = new FormData();
+        formData.append('position', $("#position").val());
+        formData.append('salary', $("#salary").val());
+        formData.append('position_description', $("#position_description").val());
+        formData.append('photo', $("#photo")[0].files[0]);
+
+        $.ajax({
+            url: '<?= SITE_URL ?>?page=admin/Position&action=store',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                console.log(data);
+                load_data();
+                $("#formCreate").trigger("reset");
+            }
         });
     };
 
     let update = () => {
         let id = $("#position_id_edit").val();
-        $.post("<?= SITE_URL . '?page=admin/Position&action=update&id=' ?>" + id, {
-            position: $("#position_edit").val(),
-            salary: $("#salary_edit").val(),
-            position_description: $("#position_description_edit").val(),
-            open: $("#open_edit").val()
-        }, (data) => {
-            load_data();
-            $('#form_edit').modal('hide');
-            console.log(data);
+        let formData = new FormData();
+        formData.append('position', $("#position_edit").val());
+        formData.append('salary', $("#salary_edit").val());
+        formData.append('position_description', $("#position_description_edit").val());
+        formData.append('open', $("#open_edit").val());
+
+        let photo = $("#photo_edit")[0].files[0];
+        if(photo) {
+            formData.append('photo', photo);
+        }
+
+        $.ajax({
+            url: '<?= SITE_URL ?>?page=admin/Position&action=update&id=' + id,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                console.log(data);
+                load_data();
+                $('#form_edit').modal('hide');
+            }
         });
     };
 
@@ -162,6 +204,7 @@
                $("#salary_edit").val(row.salary);
                $("#position_description_edit").val(row.position_description);
                $("#open_edit").val(row.open);
+               $("#img_photo").attr('src', 'public/upload/position/' + row.photo);
            }
         });
 

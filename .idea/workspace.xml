@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d08fbc2b-6e81-4921-9626-77ca8cea2751" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/modules/controllers/MessageController.php" afterPath="$PROJECT_DIR$/modules/controllers/MessageController.php" />
-      <change beforePath="$PROJECT_DIR$/modules/controllers/admin/TestimonialController.php" afterPath="$PROJECT_DIR$/modules/controllers/admin/TestimonialController.php" />
-      <change beforePath="$PROJECT_DIR$/modules/models/TestimonialModel.php" afterPath="$PROJECT_DIR$/modules/models/TestimonialModel.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/job_application/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/job_application/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/message/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/message/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php" />
-      <change beforePath="$PROJECT_DIR$/modules/views/user/home/index.view.php" afterPath="$PROJECT_DIR$/modules/views/user/home/index.view.php" />
+      <change beforePath="$PROJECT_DIR$/modules/controllers/admin/PositionController.php" afterPath="$PROJECT_DIR$/modules/controllers/admin/PositionController.php" />
+      <change beforePath="$PROJECT_DIR$/modules/models/PositionModel.php" afterPath="$PROJECT_DIR$/modules/models/PositionModel.php" />
+      <change beforePath="$PROJECT_DIR$/modules/views/admin/position/index.view.php" afterPath="$PROJECT_DIR$/modules/views/admin/position/index.view.php" />
+      <change beforePath="$PROJECT_DIR$/modules/views/user/position/index.view.php" afterPath="$PROJECT_DIR$/modules/views/user/position/index.view.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,23 +28,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestimonialModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/models/TestimonialModel.php">
+      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/views/admin/position/index.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="144">
+              <caret line="171" column="55" lean-forward="true" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
+              <folding>
+                <marker date="1516058128805" expanded="true" signature="4492:5048" ph="..." />
+                <marker date="1516058128805" expanded="true" signature="4674:5030" ph="..." />
+                <marker date="1516058128805" expanded="true" signature="4727:5010" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="111" column="103" lean-forward="false" selection-start-line="111" selection-start-column="103" selection-end-line="111" selection-end-column="103" />
+            <state relative-caret-position="308">
+              <caret line="192" column="8" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="195" selection-end-column="9" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
                 <marker date="1516054771231" expanded="true" signature="5001:5545" ph="..." />
                 <marker date="1516054771231" expanded="true" signature="5165:5527" ph="..." />
                 <marker date="1516054771231" expanded="true" signature="5218:5507" ph="..." />
@@ -57,14 +57,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/views/user/home/index.view.php">
+      <file leaf-file-name="PositionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/controllers/admin/PositionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1848">
-              <caret line="77" column="104" lean-forward="false" selection-start-line="77" selection-start-column="104" selection-end-line="77" selection-end-column="104" />
-              <folding>
-                <marker date="1515967703657" expanded="true" signature="5452:5527" ph="{...}" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PositionModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/models/PositionModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,18 +80,8 @@
       <file leaf-file-name="TestimonialController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/controllers/admin/TestimonialController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/controllers/MessageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="54" />
+            <state relative-caret-position="105">
+              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -100,7 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Logout</find>
       <find>Home</find>
       <find>nav</find>
       <find>20</find>
@@ -130,6 +127,7 @@
       <find>attachment</find>
       <find>Create Tes</find>
       <find>testimonia</find>
+      <find>id=&quot;position&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>selected disabled</replace>
@@ -159,7 +157,6 @@
         <option value="$PROJECT_DIR$/modules/models/ProjectTeamModel.php" />
         <option value="$PROJECT_DIR$/library/database.class.php" />
         <option value="$PROJECT_DIR$/public/css/custom.css" />
-        <option value="$PROJECT_DIR$/modules/controllers/admin/PositionController.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/HomeController.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/ProjectController.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/ProjectTeamController.php" />
@@ -178,14 +175,11 @@
         <option value="$PROJECT_DIR$/modules/views/admin/setting/index.view.php" />
         <option value="$PROJECT_DIR$/modules/views/admin/team/index.view.php" />
         <option value="$PROJECT_DIR$/modules/views/admin/user/index.view.php" />
-        <option value="$PROJECT_DIR$/modules/models/PositionModel.php" />
-        <option value="$PROJECT_DIR$/modules/views/admin/position/index.view.php" />
         <option value="$PROJECT_DIR$/modules/controllers/PositionController.php" />
         <option value="$PROJECT_DIR$/modules/views/user/template.view.php" />
         <option value="$PROJECT_DIR$/modules/models/MessageModel.php" />
         <option value="$PROJECT_DIR$/modules/controllers/admin/JobApplicationController.php" />
         <option value="$PROJECT_DIR$/modules/views/admin/template.view.php" />
-        <option value="$PROJECT_DIR$/modules/views/user/position/index.view.php" />
         <option value="$PROJECT_DIR$/modules/models/ServiceModel.php" />
         <option value="$PROJECT_DIR$/modules/views/admin/service/index.view.php" />
         <option value="$PROJECT_DIR$/modules/controllers/MessageController.php" />
@@ -195,6 +189,10 @@
         <option value="$PROJECT_DIR$/modules/controllers/admin/TestimonialController.php" />
         <option value="$PROJECT_DIR$/modules/views/user/home/index.view.php" />
         <option value="$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php" />
+        <option value="$PROJECT_DIR$/modules/controllers/admin/PositionController.php" />
+        <option value="$PROJECT_DIR$/modules/models/PositionModel.php" />
+        <option value="$PROJECT_DIR$/modules/views/user/position/index.view.php" />
+        <option value="$PROJECT_DIR$/modules/views/admin/position/index.view.php" />
       </list>
     </option>
   </component>
@@ -243,6 +241,17 @@
             <path>
               <item name="Sofile" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sofile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Sofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sofile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Sofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sofile" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -256,7 +265,7 @@
               <item name="Sofile" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="upload" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="testimonial" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="position" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -308,7 +317,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="home/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/user/home/index.view.php&#10;position/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/user/position/index.view.php&#10;testimonial/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/testimonial/index.view.php&#10;MessageCOnt&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/admin/MessageController.php&#10;MessageCon&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/MessageController.php&#10;position/inde&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/position/index.view.php&#10;job_application/in&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/job_application/index.view.php&#10;message/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/message/index.view.php&#10;job_application/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/job_application/index.view.php&#10;service/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/service/index.view.php&#10;template&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/template.view.php&#10;project/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/project/index.view.php&#10;Message&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/MessageController.php&#10;Home&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/admin/HomeController.php&#10;templ&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/template.view.php&#10;project/in&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/project/index.view.php&#10;team/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/team/index.view.php&#10;projectTeam/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/projectTeam/index.view.php&#10;user/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/user/index.view.php&#10;data&#9;FILE&#9;file:///var/www/html/Sofile/library/database.class.php&#10;elo&#9;FILE&#9;file:///var/www/html/Sofile/library/eloquent.class.php&#10;model&#9;FILE&#9;file:///var/www/html/Sofile/library/model.class.php&#10;we&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/welcome.view.php&#10;welc&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/welcome.view.php&#10;view&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/login.view.php" />
+    <property name="SearchEverywhereHistoryKey" value="testimonial/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/testimonial/index.view.php&#10;position/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/user/position/index.view.php&#10;Tes&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/admin/TestimonialController.php&#10;PositionCOn&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/admin/PositionController.php&#10;home/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/user/home/index.view.php&#10;MessageCOnt&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/admin/MessageController.php&#10;MessageCon&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/MessageController.php&#10;position/inde&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/position/index.view.php&#10;job_application/in&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/job_application/index.view.php&#10;message/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/message/index.view.php&#10;job_application/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/job_application/index.view.php&#10;service/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/service/index.view.php&#10;template&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/template.view.php&#10;project/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/project/index.view.php&#10;Message&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/MessageController.php&#10;Home&#9;FILE&#9;file:///var/www/html/Sofile/modules/controllers/admin/HomeController.php&#10;templ&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/template.view.php&#10;project/in&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/project/index.view.php&#10;team/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/team/index.view.php&#10;projectTeam/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/projectTeam/index.view.php&#10;user/index&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/admin/user/index.view.php&#10;data&#9;FILE&#9;file:///var/www/html/Sofile/library/database.class.php&#10;elo&#9;FILE&#9;file:///var/www/html/Sofile/library/eloquent.class.php&#10;model&#9;FILE&#9;file:///var/www/html/Sofile/library/model.class.php&#10;we&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/welcome.view.php&#10;welc&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/welcome.view.php&#10;view&#9;FILE&#9;file:///var/www/html/Sofile/modules/views/login.view.php" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -393,12 +402,12 @@
       <workItem from="1515911968754" duration="3334000" />
       <workItem from="1515950695412" duration="3928000" />
       <workItem from="1516019615923" duration="403000" />
-      <workItem from="1516053854950" duration="917000" />
+      <workItem from="1516053854950" duration="4367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138870000" />
+    <option name="totallyTimeSpent" value="142320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="51" width="1376" height="694" extended-state="6" />
@@ -663,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/models/PositionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/models/MessageModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -733,20 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/views/admin/position/index.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controllers/admin/PositionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/controllers/admin/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19">
@@ -754,26 +742,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/views/user/position/index.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="97" column="40" lean-forward="true" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/controllers/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/models/TestimonialModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -788,23 +760,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/models/TestimonialModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/controllers/admin/TestimonialController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="105">
+          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/views/user/position/index.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="103" lean-forward="false" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/models/PositionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controllers/admin/PositionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/views/admin/testimonial/index.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="111" column="103" lean-forward="false" selection-start-line="111" selection-start-column="103" selection-end-line="111" selection-end-column="103" />
+        <state relative-caret-position="308">
+          <caret line="192" column="8" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="195" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
             <marker date="1516054771231" expanded="true" signature="5001:5545" ph="..." />
             <marker date="1516054771231" expanded="true" signature="5165:5527" ph="..." />
             <marker date="1516054771231" expanded="true" signature="5218:5507" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/views/admin/position/index.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="171" column="55" lean-forward="true" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
+          <folding>
+            <marker date="1516058128805" expanded="true" signature="4492:5048" ph="..." />
+            <marker date="1516058128805" expanded="true" signature="4674:5030" ph="..." />
+            <marker date="1516058128805" expanded="true" signature="4727:5010" ph="..." />
           </folding>
         </state>
       </provider>

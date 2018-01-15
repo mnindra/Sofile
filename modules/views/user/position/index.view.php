@@ -16,7 +16,7 @@
       <?php foreach ($position as $item) { ?>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="<?= PATH ?>public/img/team/1.jpg" alt="">
+            <img class="mx-auto rounded-circle" src="<?= PATH ?>public/upload/position/<?= $item->photo ?>" alt="">
             <h4><?= $item->position ?></h4>
             <p class="text-muted"><?= $item->position_description ?></p>
             <?php if($item->open == 1) { ?>
