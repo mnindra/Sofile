@@ -9,5 +9,6 @@ class ProjectModel extends Eloquent {
     'project_description',
     'link',
     'portfolio',
+    'photo'
   ];
 }

@@ -28,15 +28,29 @@ class ProjectController extends AdminController
   }
 
   public function store() {
+    $photo = uniqid() . ".jpg";
+    move_uploaded_file($_FILES['photo']['tmp_name'], "public/upload/project/" . $photo);
+
+    $_POST['photo'] = $photo;
     $this->Project->create($_POST);
   }
 
   public function update($id) {
+    if (isset($_FILES['photo'])) {
+      $project = $this->Project->find($id);
+      unlink("public/upload/project/" . $project->photo);
+
+      $photo = uniqid() . ".jpg";
+      move_uploaded_file($_FILES['photo']['tmp_name'], "public/upload/project/" . $photo);
+      $_POST['photo'] = $photo;
+    }
+
     $this->Project->update($_POST, $id);
   }
 
   public function destroy($id) {
+    $project = $this->Project->find($id);
+    unlink("public/upload/project/" . $project->photo);
     $this->Project->destroy($id);
   }
 }
-?>

@@ -51,7 +51,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="<?= PATH ?>public/img/portfolio/02-thumbnail.jpg" alt="">
+          <img class="img-fluid" src="<?= PATH ?>public/upload/project/<?= $item->photo ?>" alt="">
         </a>
         <div class="portfolio-caption">
           <h4><?= $item->title ?></h4>

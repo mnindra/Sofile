@@ -50,6 +50,11 @@
             <input type="text" id="link" class="form-control" placeholder="Project Link">
           </div>
 
+          <div class="form-group">
+            <label for="photo">Screenshot</label>
+            <input type="file" name="photo" id="photo" class="form-control">
+          </div>
+
           <button type="button" class="btn btn-primary" onclick="create()">Submit</button>
         </div>
       </div>
@@ -59,7 +64,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="form_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Project</h5>
@@ -71,40 +76,49 @@
         <form>
           <input type="hidden" id="project_id_edit">
 
-          <div class="form-group">
-            <label for="service_id_edit">Service Name</label>
-            <div>
-              <select id="service_id_edit" class="custom-select" required>
-                <option selected disabled>Select Project Service</option>
-                <?php foreach ($service as $item) { ?>
-                  <option value="<?= $item->service_id ?>"><?= $item->service ?></option>
-                <?php } ?>
-              </select>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="title_edit">Title</label>
+                <input type="text" id="title_edit" class="form-control" placeholder="Project Title">
+              </div>
+              <div class="form-group">
+                <label for="service_id_edit">Service Name</label>
+                <div>
+                  <select id="service_id_edit" class="custom-select" required>
+                    <option selected disabled>Select Project Service</option>
+                    <?php foreach ($service as $item) { ?>
+                      <option value="<?= $item->service_id ?>"><?= $item->service ?></option>
+                    <?php } ?>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="project_description_edit">Description</label>
+                <input type="text" id="project_description_edit" class="form-control" placeholder="Project Description">
+              </div>
+              <div class="form-group">
+                <label for="link_edit">Link</label>
+                <input type="text" id="link_edit" class="form-control" placeholder="Project Link">
+              </div>
+              <div class="form-group">
+                <label for="portfolio_edit">Publish as Portfolio</label>
+                <div>
+                  <select id="portfolio_edit" class="custom-select" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="title_edit">Title</label>
-            <input type="text" id="title_edit" class="form-control" placeholder="Project Title">
-          </div>
-
-          <div class="form-group">
-            <label for="project_description_edit">Description</label>
-            <input type="text" id="project_description_edit" class="form-control" placeholder="Project Description">
-          </div>
-
-          <div class="form-group">
-            <label for="link_edit">Link</label>
-            <input type="text" id="link_edit" class="form-control" placeholder="Project Link">
-          </div>
-
-          <div class="form-group">
-            <label for="portfolio_edit">Publish as Portfolio</label>
-            <div>
-              <select id="portfolio_edit" class="custom-select" required>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="photo_edit">Screenshot</label>
+                <img src="" alt="" id="img_photo" class="img-thumbnail">
+                <br><br>
+                <input type="file" name="photo" id="photo_edit" class="form-control">
+              </div>
             </div>
           </div>
         </form>
@@ -151,34 +165,52 @@
     };
 
     let create = () => {
-        let service_id = $("#service_id").val();
-        let title = $("#title").val();
-        let project_description = $("#project_description").val();
-        let link = $("#link").val();
-        $.post("<?= SITE_URL . '?page=admin/Project&action=store' ?>", {
-            service_id,
-            title,
-            project_description,
-            link
-        }, (data) => {
-            load_data();
-            $("#formCreate").trigger("reset");
-            console.log(data);
+        let formData = new FormData();
+        formData.append('service_id', $("#service_id").val());
+        formData.append('title', $("#title").val());
+        formData.append('project_description', $("#project_description").val());
+        formData.append('link', $("#link").val());
+        formData.append('photo', $("#photo")[0].files[0]);
+
+        $.ajax({
+            url: '<?= SITE_URL ?>?page=admin/Project&action=store',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                console.log(data);
+                load_data();
+                $("#formCreate").trigger("reset");
+            }
         });
     };
 
     let update = () => {
         let id = $("#project_id_edit").val();
-        $.post("<?= SITE_URL . '?page=admin/Project&action=update&id=' ?>" + id, {
-            service_id: $("#service_id_edit").val(),
-            title: $("#title_edit").val(),
-            project_description: $("#project_description_edit").val(),
-            link: $("#link_edit").val(),
-            portfolio: $("#portfolio_edit").val(),
-        }, (data) => {
-            load_data();
-            $('#form_edit').modal('hide');
-            console.log(data);
+        let formData = new FormData();
+        formData.append('service_id', $("#service_id_edit").val());
+        formData.append('title', $("#title_edit").val());
+        formData.append('project_description', $("#project_description_edit").val());
+        formData.append('link', $("#link_edit").val());
+        formData.append('portfolio', $("#portfolio_edit").val());
+
+        let photo = $("#photo_edit")[0].files[0];
+        if(photo) {
+            formData.append('photo', photo);
+        }
+
+        $.ajax({
+            url: '<?= SITE_URL ?>?page=admin/Project&action=update&id=' + id,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                console.log(data);
+                load_data();
+                $('#form_edit').modal('hide');
+            }
         });
     };
 
@@ -197,6 +229,7 @@
                 $("#project_description_edit").val(row.project_description);
                 $("#link_edit").val(row.link);
                 $("#portfolio_edit").val(row.portfolio);
+                $("#img_photo").attr('src', 'public/upload/project/' + row.photo);
             }
         });
 
