@@ -139,7 +139,7 @@
     };
 
     let seeAttachment = (file) => {
-        window.location = '<?= PATH ?>public/upload/' + file;
+        window.location = '<?= PATH ?>public/upload/attachment/' + file;
     };
 
     load_data();

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-9 col-lg-9">
+  <div class="col-md-8 col-lg-8">
     <table id="table-data" class="table table-hover table-striped">
       <thead>
       <tr>
@@ -15,7 +15,7 @@
     </table>
   </div>
 
-  <div class="col-md-3 col-lg-3">
+  <div class="col-md-4 col-lg-4">
     <form action="" id="formCreate">
       <div class="card">
         <div class="card-body">
@@ -44,7 +44,12 @@
 
           <div class="form-group">
             <label for="testimonial">Testimonial</label>
-            <textarea name="testimonial" id="testimonial" class="form-control"></textarea>
+            <textarea name="testimonial" id="testimonial" class="form-control" placeholder="Testimonial"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Photo</label>
+            <input type="file" name="photo" id="photo" class="form-control">
           </div>
 
           <button type="button" class="btn btn-primary" onclick="create()">Submit</button>
@@ -56,7 +61,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="form_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Project</h5>
@@ -68,29 +73,53 @@
         <form>
           <input type="hidden" id="testimonial_id_edit">
 
-          <div class="form-group">
-            <label for="name_edit">Name</label>
-            <input type="text" id="name_edit" class="form-control" placeholder="Name">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name_edit">Name</label>
+                <input type="text" id="name_edit" class="form-control" placeholder="Name">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email_edit">Email</label>
+                <input type="email" id="email_edit" class="form-control" placeholder="Email">
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="email_edit">Email</label>
-            <input type="email" id="email_edit" class="form-control" placeholder="Email">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="phone_edit">Phone</label>
+                <input type="text" id="phone_edit" class="form-control" placeholder="Phone">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="company_edit">Company</label>
+                <input type="text" id="company_edit" class="form-control" placeholder="Company">
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="phone_edit">Phone</label>
-            <input type="text" id="phone_edit" class="form-control" placeholder="Phone">
-          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="testimonial_edit">Testimonial</label>
+                <textarea id="testimonial_edit" class="form-control" placeholder="Testimonial" rows="11"></textarea>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <label for="company_edit">Company</label>
-            <input type="text" id="company_edit" class="form-control" placeholder="Company">
-          </div>
-
-          <div class="form-group">
-            <label for="testimonial_edit">Testimonial</label>
-            <textarea id="testimonial_edit" class="form-control" placeholder="Testimonial"></textarea>
+            <div class="col-md-6">
+              <div class="form-group">
+                <img src="" alt="" id="img_photo" style="border-radius: 50%; margin: auto; display: block;" width="225" height="225">
+                <br><br>
+                <input type="file" name="photo" id="photo_edit" class="form-control">
+              </div>
+            </div>
           </div>
         </form>
       </div>
@@ -129,38 +158,53 @@
     };
 
     let create = () => {
-        let project_id = <?= $_GET['id'] ?>;
-        let name = $("#name").val();
-        let email = $("#email").val();
-        let phone = $("#phone").val();
-        let company = $("#company").val();
-        let testimonial = $("#testimonial").val();
-        $.post("<?= SITE_URL . '?page=admin/Testimonial&action=store' ?>", {
-            project_id,
-            name,
-            email,
-            phone,
-            company,
-            testimonial,
-        }, (data) => {
-            load_data();
-            $("#formCreate").trigger("reset");
-            console.log(data);
+        let formData = new FormData();
+        formData.append('project_id', <?= $_GET['id'] ?>);
+        formData.append('name', $("#name").val());
+        formData.append('email', $("#email").val());
+        formData.append('phone', $("#phone").val());
+        formData.append('company', $("#company").val());
+        formData.append('testimonial', $("#testimonial").val());
+        formData.append('photo', $("#photo")[0].files[0]);
+
+        $.ajax({
+            url: '<?= SITE_URL ?>?page=admin/Testimonial&action=store',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                load_data();
+                $("#formCreate").trigger("reset");
+            }
         });
     };
 
     let update = () => {
         let id = $("#testimonial_id_edit").val();
-        $.post("<?= SITE_URL . '?page=admin/Testimonial&action=update&id=' ?>" + id, {
-            name: $("#name_edit").val(),
-            email: $("#email_edit").val(),
-            phone: $("#phone_edit").val(),
-            company: $("#company_edit").val(),
-            testimonial: $("#testimonial_edit").val(),
-        }, (data) => {
-            load_data();
-            $('#form_edit').modal('hide');
-            console.log(data);
+        let formData = new FormData();
+        formData.append('project_id', <?= $_GET['id'] ?>);
+        formData.append('name', $("#name_edit").val());
+        formData.append('email', $("#email_edit").val());
+        formData.append('phone', $("#phone_edit").val());
+        formData.append('company', $("#company_edit").val());
+        formData.append('testimonial', $("#testimonial_edit").val());
+
+        let photo = $("#photo_edit")[0].files[0];
+        if(photo) {
+            formData.append('photo', photo);
+        }
+
+        $.ajax({
+            url: '<?= SITE_URL ?>?page=admin/Testimonial&action=update&id=' + id,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                load_data();
+                $('#form_edit').modal('hide');
+            }
         });
     };
 
@@ -179,6 +223,7 @@
                 $("#phone_edit").val(row.phone);
                 $("#company_edit").val(row.company);
                 $("#testimonial_edit").val(row.testimonial);
+                $("#img_photo").attr('src', 'public/upload/testimonial/' + row.photo);
             }
         });
 

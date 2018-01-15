@@ -9,6 +9,7 @@ class TestimonialModel extends Eloquent {
     'email',
     'phone',
     'company',
-    'testimonial'
+    'testimonial',
+    'photo'
   ];
 }

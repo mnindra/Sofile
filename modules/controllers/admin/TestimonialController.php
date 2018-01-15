@@ -25,14 +25,29 @@ class TestimonialController extends AdminController
   }
 
   public function store() {
+    $photo = uniqid() . ".jpg";
+    move_uploaded_file($_FILES['photo']['tmp_name'], "public/upload/testimonial/" . $photo);
+
+    $_POST['photo'] = $photo;
     $this->Testimonial->create($_POST);
   }
 
   public function update($id) {
+    if (isset($_FILES['photo'])) {
+      $testimonial = $this->Testimonial->find($id);
+      unlink("public/upload/testimonial/" . $testimonial->photo);
+
+      $photo = uniqid() . ".jpg";
+      move_uploaded_file($_FILES['photo']['tmp_name'], "public/upload/testimonial/" . $photo);
+      $_POST['photo'] = $photo;
+    }
+
     $this->Testimonial->update($_POST, $id);
   }
 
   public function destroy($id) {
+    $testimonial = $this->Testimonial->find($id);
+    unlink("public/upload/testimonial/" . $testimonial->photo);
     $this->Testimonial->destroy($id);
   }
 }

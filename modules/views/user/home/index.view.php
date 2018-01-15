@@ -75,7 +75,7 @@
       <?php foreach ($testimonial as $item) { ?>
       <div class="col-sm-4">
         <div class="team-member">
-          <img class="mx-auto rounded-circle" src="<?= PATH ?>public/img/team/1.jpg" alt="">
+          <img class="mx-auto rounded-circle" src="<?= PATH ?>public/upload/testimonial/<?= $item->photo ?>" alt="">
           <h4><?= $item->name ?></h4>
           <p class="text-muted"><?= $item->company ?></p>
           <p class="text-muted"><?= $item->testimonial ?></p>
