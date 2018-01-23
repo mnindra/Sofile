@@ -70,7 +70,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="formUpdate">
           <input type="hidden" id="testimonial_id_edit">
 
           <div class="row">
@@ -215,6 +215,7 @@
     };
 
     let show_edit_form = (id) => {
+        $("#formUpdate").trigger("reset");
         window.data_master.map(row => {
             if(row.testimonial_id == id) {
                 $("#testimonial_id_edit").val(row.testimonial_id);

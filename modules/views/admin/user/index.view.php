@@ -162,7 +162,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="formUpdate">
           <input type="hidden" id="user_id_edit">
           <div class="row">
             <div class="col-md-6 col-lg-6">
@@ -339,6 +339,7 @@
     };
 
     let show_edit_form = (id) => {
+        $("#formUpdate").trigger("reset");
         window.data_master.map(row => {
             if(row.user_id == id) {
                 $("#user_id_edit").val(row.user_id);
